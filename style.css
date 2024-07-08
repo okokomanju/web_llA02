@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+    padding-bottom: 1rem;
+  }
+
+header {
+  background: rgb(255, 227, 200);
+}
+
+header h1 {
+    text-align: center;
+    padding: 1rem;
+    font-family: "Darumadrop One", sans-serif;
+    color: rgb(125, 83, 61);
+    font-size:65px;
+  }
+  
+  nav ul {
+    padding-bottom: 1rem;
+    margin: 0;
+    text-align: center;
+ } 
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    font-weight: bold;
+    transition-duration: .5s;
+    font-family: "Zen Maru Gothic", cursive;
+    color: rgb(181, 124, 93);
+  }
+  
+nav ul li a:hover{
+    color: rgb(255, 148, 91);
+}
+
+  main {
+    padding: 1rem;
+    /*max-width: 1200px;*/
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+
+section {
+  background: rgb(255, 227, 200);
+  padding: 20px;
+}
+
+.container{
+     /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.container a{
+  font-family: "Zen Maru Gothic", cursive;
+    color: rgb(181, 124, 93);
+}
+
+.container p{
+  text-align: center;
+}
+
+
+/* 
+    gap: 20px;
+  }
+  
+  .column-img {
+    flex: 1;
+  }
+  
+  .column-text {
+    flex: 2;
+  }
+   */
+
+footer {
+  background:rgb(125, 83, 61);
+  color: rgb(181, 124, 93);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.about.footer {
+  background:rgb(255, 227, 200);
+  color: rgb(181, 124, 93);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+/*
+.sec01 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.sec02 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.sec03 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+*/
+
+.zen-maru-gothic-regular {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.darumadrop-one-regular {
+  font-family: "Darumadrop One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*タブレット用*/
+@media all and (min-width: 600px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*コンピュータ用*/
+@media all and (min-width: 1025px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sec01 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .sec02 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .sec03 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+ .matrix .bg-wrap,
+.matrix .bg-wrap .inn {
+  display: block;
+  padding-bottom: 1rem;
+  font-family: "Zen Maru Gothic", cursive;
+    color: rgb(125, 83, 61);
+    text-align: center;
+}
+ 
+.matrix .bg-wrap {
+  overflow: hidden;
+  opacity: 0;
+}
+ 
+.matrix .bg-wrap + .bg-wrap {
+  margin-top: 10px;
+}
+ 
+.matrix .bg-wrap .inn.large {
+  font-size: 36px;
+  font-weight: bold;
+}
+.matrix .bg-wrap .inn.small {
+  font-size: 15px;
+}
+ 
+.matrix .bg-wrap .inn {
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 0, 100);
+  transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+ 
+.matrix.is-animated .bg-wrap {
+  opacity: 1;
+}
+ 
+.matrix.is-animated .bg-wrap .inn {
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
